@@ -45,7 +45,7 @@ public class CustomerController {
 
 	}
 
-	@PutMapping("/update/{id}")
+	@PutMapping("/update/{id}") // added comment in the controller
 	public ResponseEntity<?> updateCustomer(@RequestBody Customer c, @PathVariable int id)
 			throws CustomerNotFoundException {
 		Customer cust1 = service.updateCustomer(c, id);
