@@ -1,0 +1,4 @@
+FROM openjdk:8
+EXPOSE 8092
+ADD target/Spring-Bank-App-exe.jar Spring-Bank-App-exe.jar
+ENTRYPOINT ["java","-jar","/Spring-Bank-App-exe.jar"]
