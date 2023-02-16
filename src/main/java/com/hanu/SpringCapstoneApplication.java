@@ -18,14 +18,15 @@ public class SpringCapstoneApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringCapstoneApplication.class, args);
 	}
+
 	@Autowired
 	CustomerRepository repo;
-	
+
 	@PostConstruct
 	public void existingData() {
 		System.out.println("adding data into the database........");
-		Customer cust = new Customer(131,"Hanu", new Account(141,"savings",300));
-		Customer cust1 = new Customer(132,"Ram", new Account(142,"savings",3000));
+		Customer cust = new Customer(131, "Hanu", new Account(141, "savings", 300));
+		Customer cust1 = new Customer(132, "Ram", new Account(142, "savings", 3000));
 		repo.save(cust);
 		repo.save(cust1);
 	}
